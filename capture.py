@@ -1,3 +1,5 @@
+#save a 16 bit TIFF file with radiometric data from a usb thermal camera
+
 import cv2
 
 cap = cv2.VideoCapture(“/dev/video0”)
@@ -6,15 +8,18 @@ cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter.fourcc('Y','1','6',' '))
 cap.set(cv2.CAP_PROP_CONVERT_RGB, 0)
 
-framecount=2
+framecount=1
 frame_buf=[]
 
 for _ in range(framecount): #record indefinitely (until user presses q), replace with "while True"
     stream_ret, frame = cap.read()
     if stream_ret:
         cv2.imshow("image", frame)
-        if cv2.waitKey(1) == ord('q'):
-            break;
+
+        while true:
+            if cv2.waitKey(1) == ord('q'):
+                break;
+                
         frame_buf.append(frame)
         
 cv2.destroyAllWindows()
