@@ -11,13 +11,13 @@ cap.set(cv2.CAP_PROP_CONVERT_RGB, 0)
 framecount=1
 frame_buf=[]
 
-for _ in range(framecount): #record indefinitely (until user presses q), replace with "while True"
+for _ in range(framecount): 
     stream_ret, frame = cap.read()
     if stream_ret:
         cv2.imshow("image", frame)
 
         while true:
-            if cv2.waitKey(1) == ord('q'):
+            if cv2.waitKey(1) == ord('q'): #hold image up until q is pressed
                 break;
                 
         frame_buf.append(frame)
