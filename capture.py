@@ -1,15 +1,15 @@
-#capture.py
-
 import cv2
+
 cap = cv2.VideoCapture(“/dev/video0”)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 512)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter.fourcc('Y','1','6',' '))
 cap.set(cv2.CAP_PROP_CONVERT_RGB, 0)
 
-framecount=600
+framecount=2
 frame_buf=[]
-for _ in range(framecount):#record indefinitely (until user presses q), replace with "while True"
+
+for _ in range(framecount): #record indefinitely (until user presses q), replace with "while True"
     stream_ret, frame = cap.read()
     if stream_ret:
         cv2.imshow("image", frame)
