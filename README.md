@@ -8,7 +8,7 @@ For the Boson specifically this C++ program can be used: https://github.com/FLIR
 **capture_tiff.py**
 Captures on frame from the video stream as a 16 bit TIFF file with radiometric data
 
-The linux program on this page was used to create the capture_tiff.py program: https://flir.custhelp.com/app/answers/detail/a_id/3387/~/flir-oem---boson-video-and-image-capture-using-opencv-16-bit-y16
+The linux program on this page was used as a reference to create the capture_tiff.py program: https://flir.custhelp.com/app/answers/detail/a_id/3387/~/flir-oem---boson-video-and-image-capture-using-opencv-16-bit-y16
 
 **temp_at_pixel.py**
 A template for determining temperature at a specific pixel
