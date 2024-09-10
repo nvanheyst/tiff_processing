@@ -3,7 +3,7 @@
 This repo includes programs for capturing and processing 16 bit radiometric TIFF files from a USB thermal camera such as the FLIR Radiometic Boson 640.
 
 
-For the Boson specifically this C++ program can be used: https://github.com/FLIR/BosonUSB. Explained more here: https://flir.custhelp.com/app/answers/detail/a_id/3305/~/flir-oem---linux-and-embedded-support-for-boson-sdk-commands
+For the Boson specifically this C++ program can be used: https://github.com/FLIR/BosonUSB. Explained more here: https://flir.custhelp.com/app/answers/detail/a_id/3305/~/flir-oem---linux-and-embedded-support-for-boson-sdk-commands. Scale and offset should be here: https://groupgets-files.s3.amazonaws.com/boson/documents/Boson%20datasheet%2C%20102-2013-40%2C%20Rev%20340.pdf
 
 **capture_tiff.py**
 Captures on frame from the video stream as a 16 bit TIFF file with radiometric data
